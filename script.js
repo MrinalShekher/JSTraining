@@ -4,8 +4,8 @@ function changeColor(){
     child.style.backgroundColor = "cyan";
     if(true){
         var a = 2;
-        let b = 3;
-        const c = 4;
+        // let b = 3;
+        // const c = 4;
     }
     console.log(a);
 }
