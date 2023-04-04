@@ -2,12 +2,12 @@ function changeColor(){
     console.log('changed');
     let child = document.getElementById('one');
     child.style.backgroundColor = "cyan";
-    if(true){
-        var a = 2;
-        // let b = 3;
-        // const c = 4;
-    }
-    console.log(a);
+    // if(true){
+    //     var a = 2;
+    //     // let b = 3;
+    //     // const c = 4;
+    // }
+    // console.log(a);
 }
 console.log("varun");
 // function increment(){
@@ -47,4 +47,23 @@ function updateVal(Arith){
 
     }
         
+}
+
+function checkPerfectSquare(perfect){
+    let z= document.getElementById('check');
+    // console.log(typeof perfect.target.valueAsNumber);
+     let x=perfect.target.valueAsNumber;
+    // console.log(Math.sqrt(x))
+    if(x<0){
+    z.innerText=("not Perfect Square");}
+
+    else{
+        let sqrt=Math.sqrt(x);
+        let flr=Math.floor(sqrt);
+        if(sqrt-flr == 0)
+        z.innerText=("perfect square");
+        else 
+        z.innerText=("Not a Perfect Square");
+
+    }
 }
