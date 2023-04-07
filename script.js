@@ -49,21 +49,37 @@ function updateVal(Arith){
         
 }
 
-function checkPerfectSquare(perfect){
-    let z= document.getElementById('check');
-    // console.log(typeof perfect.target.valueAsNumber);
-     let x=perfect.target.valueAsNumber;
-    // console.log(Math.sqrt(x))
-    if(x<0){
-    z.innerText=("not Perfect Square");}
+// function checkPerfectSquare(perfect){
+//     let z= document.getElementById('check');
+//     // console.log(typeof perfect.target.valueAsNumber);
+//      let x=perfect.target.valueAsNumber;
+//     // console.log(Math.sqrt(x))
+//     if(x<0){
+//     z.innerText=("not Perfect Square");}
 
-    else{
-        let sqrt=Math.sqrt(x);
-        let flr=Math.floor(sqrt);
-        if(sqrt-flr == 0)
-        z.innerText=("perfect square");
-        else 
-        z.innerText=("Not a Perfect Square");
+//     else{
+//         let sqrt=Math.sqrt(x);
+//         let flr=Math.floor(sqrt);
+//         if(sqrt-flr == 0)
+//         z.innerText=("perfect square");
+//         else 
+//         z.innerText=("Not a Perfect Square");
 
+//     }
+// }
+
+function isPerfectSquare(){
+    let z = document.getElementById('check');
+    let x = document.querySelector('input[type="number"]').valueAsNumber;
+    if (x < 0) {
+        z.innerText = "Not a Perfect Square";
+        return;
+    }
+    let sqrt = Math.sqrt(x);
+    let flr = Math.floor(sqrt);
+    if (sqrt - flr == 0) {
+        z.innerText = "Perfect Square";
+    } else {
+        z.innerText = "Not a Perfect Square";
     }
 }
