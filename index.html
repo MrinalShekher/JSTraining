@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
+    
+
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
         <title>JS Training</title>
         <link rel="stylesheet" href="style.css">
     </head>
@@ -16,7 +18,7 @@
                 <button class="page-btn" id="neg-button" onclick="updateVal('decrement')">-</button>
                 <br/>
                 <br/>
-                <input type="number" placeholder="Enter a Number" onchange="isPerfectSquare(event)">
+                <input type="number" min="1" max="50" placeholder="Enter a Number" onchange="validateInput(event)">
                 <button class="page-btn" onClick="isPerfectSquare()">GO</button>
                 <div id="check">
 

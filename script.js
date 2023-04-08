@@ -71,6 +71,7 @@ function updateVal(Arith){
 function isPerfectSquare(){
     let z = document.getElementById('check');
     let x = document.querySelector('input[type="number"]').valueAsNumber;
+    console.log(x);
     if (x < 0) {
         z.innerText = "Not a Perfect Square";
         return;
@@ -81,5 +82,16 @@ function isPerfectSquare(){
         z.innerText = "Perfect Square";
     } else {
         z.innerText = "Not a Perfect Square";
+    }
+}
+
+function validateInput(event){
+    console.log("Demo");
+    var x= event.target.valueAsNumber;
+    if (x<=0){
+        event.target.value=1;
+    }
+    else if(x>=51){
+        event.target.value=50;
     }
 }
