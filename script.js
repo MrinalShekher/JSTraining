@@ -1,3 +1,5 @@
+
+
 function changeColor(){
     console.log('changed');
     let child = document.getElementById('one');
@@ -95,3 +97,71 @@ function validateInput(event){
         event.target.value=50;
     }
 }
+
+// function printPrimetill(){
+//   let x= document.getElementById("prime");
+//   let val= x.value;
+//   let disp=document.getElementById("check");
+//   let result="";
+//   let i=2;
+//   let count=0;
+//   //for(let i=2; i<=val;i++){
+//     while(i<val) {
+
+//     let flag=0;
+//     for(let j=2; j<=Math.sqrt(i);j++){
+//         if(i%j==0){
+//             flag=1;
+//             break;
+//         }
+//     }
+//     if(flag==0){
+//         console.log(i);
+//         count++;
+    
+        
+//     }
+//     i++;
+//   }
+// result=result.substring(0,result.length -1);
+// check.innerText=result;
+
+// }
+
+//first n prime numbers
+
+function printPrime(){
+  let x= document.getElementById("prime");
+  let val= x.value;
+  let disp=document.getElementById("check");
+  let result="";
+  let i=2;
+  let count=0;
+
+  while(count<val){
+
+    let flag=0;
+    for(let j=2; j<=Math.sqrt(i);j++){
+        if(i%j==0){
+            flag=1;
+            break;
+        }
+    }
+    if(flag==0){
+        console.log(i);
+        count++;
+        result=result+i+",";
+    }
+        
+    
+    i++;
+  }
+result=result.substring(0,result.length -1);
+check.innerText=result;
+
+}
+
+
+
+
+
